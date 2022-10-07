@@ -15,7 +15,7 @@ public class Gaulois {
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + "»");
+		System.out.println(prendreParole() + "«" + texte +"»");
 	}
 
 	private String prendreParole() {
@@ -32,12 +32,14 @@ public class Gaulois {
 		parler("Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée.");
 	}
 
-	@Override
+
+	
+	
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
 	}
 
 	public static void main(String[] args) {
-		//TODO créer un main permettant de tester la classe Gaulois
-	}
+		
+		
 }
