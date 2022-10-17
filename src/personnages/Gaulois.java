@@ -35,13 +35,13 @@ public class Gaulois {
 
 	
 	
-// 	public String toString() {
-// 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
-// 	}
+ 	public String toString() {
+ 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
+ 	}
 
 	public static void main(String[] args) {
-		asterix (nom = "Astérix", force = 8);
-		System.out.println(asterix);
+		Gaulois asterix(new Gaulois "Asterix");
+		System.out.println(asterix.prendreParole());
 		
 		
 }
