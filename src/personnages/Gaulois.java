@@ -12,14 +12,14 @@ public class Gaulois {
 		return nom;
 	}
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "Â« " + texte + "Â»");
+		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 	private String prendreParole() {
 		return "Le gaulois " + nom + " : ";
 	}
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la mÃ¢choire de "+ romain.getNom());
-		romain.recevoirCoup((force / 3)*this.effetPotion);
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de "+ romain.getNom());
+		romain.recevoirCoup((this.force / 3)*this.effetPotion);
 	}
 	@Override
 	public String toString() {
@@ -27,9 +27,12 @@ public class Gaulois {
 	}
 	public void boirePotion(int forcepotion) {
 		this.effetPotion=forcepotion;
+		if(forcepotion==3){
+			this.parler("Merci Druide, je sens que ma force est 3 fois décuplée");
+		}
 	}
 	public static void main(String[] args) {
-		Gaulois gaul1=new Gaulois("Gaul1",10);
+		Gaulois gaul1=new Gaulois("Gaul1",10); // 
 		Romain rom1=new Romain("rom1",20);
 		gaul1.parler("Bonjour !!!!");
 		System.out.println("C'est Gaul : "+gaul1.getNom());
@@ -41,4 +44,3 @@ public class Gaulois {
 		System.out.println(gaul1);
 	}
 }
-
