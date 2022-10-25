@@ -1,6 +1,6 @@
 package personnages;
 
-import java.util.Random;
+import java.util.Random; 
 import java.lang.Math;
 
 public class Druide {
