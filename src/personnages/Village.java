@@ -28,6 +28,16 @@ public class Village {
 			System.out.println("Désolé, ce case n'existe pas dans le tableau!");
 		}
 	}
+	public Gaulois trouverHabitant(int position){
+		if(nbVillageois==0) {
+			System.out.println("Il y a pas des habitants!!");
+			return null;
+		}	
+		if(position>=villageois.length || position<0){
+			System.out.println("Désolé, ce case n'existe pas dans le tableau!");
+		}
+		return  this.villageois[position];
+	}
 	
 }
 
