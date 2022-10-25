@@ -38,6 +38,24 @@ public class Village {
 		}
 		return  this.villageois[position];
 	}
+	public static void main(String[] args) {
+
+		Village village=new Village("Village des Irréductibles",30);//  Declaration et initialisation d'un objet de class Village
+		/*Gaulois gaulois = village.trouverHabitant(30);
+		pour éviter l'erreur : "Index 30 out of bounds for length 30 at personnages.Village.trouverHabitant(Village.java:37)"
+		on a deux conditions dans la méthode "trouverHabitant", la première vérifie si le tableau du villagois est vide,
+		et la seconde vérifie si la position saisie est bien dans le tableau.
+		*/
+		village.setChef(new Chef("Abraracourcix",6,1,village));
+		village.ajouterHabitant(new Gaulois("Astrix",8),0);
+		village.ajouterHabitant(new Gaulois("Obélix",25),1);
+		village.afficherVillageois();
+
+		 /*Gaulois gaulois = village.trouverHabitant(1);
+		 System.out.println(gaulois);
+		 ces instructions afficheront "null" car la position 1 n'a pas encore d'élément*/
+
+	}
 	
 }
 
