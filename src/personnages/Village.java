@@ -15,13 +15,19 @@ public class Village {
     }
 	
 	
-	}
+	
 	public String getNom() {
 		return nom;
 	}
-
-	public void ajouterHabitant(String Gaulois) {
-		
+	public void ajouterHabitant(Gaulois g,int place) {
+		if(place<villageois.length && place>=0){
+			this.villageois[place]=g;
+			this.nbVillageois++;
+		}
+		else{
+			System.out.println("Désolé, ce case n'existe pas dans le tableau!");
+		}
 	}
 	
 }
+
