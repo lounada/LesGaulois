@@ -25,13 +25,13 @@ public class Scenario {
 		minus.sEquiper(Equipement.CASQUE);
 		milexcus.sEquiper(Equipement.CASQUE);
 		minus.parler("UN GAU... UN GAUGAU...");
-//		do {
-//			asterix.frapper(minus);
-//		} while (minus.getForce() > 0);
-//		milexcus.parler("UN GAU... UN GAUGAU...");
-//		do {
-//			asterix.frapper(milexcus);
-//		} while (milexcus.getForce() > 0);
+		do {
+			asterix.frapper(minus);
+		} while (minus.getForce() > 0);
+		milexcus.parler("UN GAU... UN GAUGAU...");
+		do {
+			asterix.frapper(milexcus);
+		} while (milexcus.getForce() > 0);
 //		
 //		Partie a decommenter
 		
