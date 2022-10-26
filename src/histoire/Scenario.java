@@ -5,7 +5,6 @@ import personnages.Equipement;
 import personnages.Gaulois;
 import personnages.Romain;
 import personnages.Village;
-//import villagegaulois.Musee;
 
 public class Scenario {
 
@@ -32,11 +31,14 @@ public class Scenario {
 		do {
 			asterix.frapper(milexcus);
 		} while (milexcus.getForce() > 0);
-//		
-//		Partie a decommenter
+
+		//Test de Musee:
+		Musee musee = new Musee();
+		asterix.faireUneDonnation(musee);
 		
-//		Musee musee = new Musee();
-//		asterix.faireUneDonnation(musee);
+		
+		//affichage des trophees dans musee:
+		musee.afficherTrophees();
 
 	}
 

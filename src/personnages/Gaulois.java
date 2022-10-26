@@ -1,5 +1,5 @@
 package personnages;
-
+import histoire.Musee;
 public class Gaulois {
 	private String nom;
 	private int force; 
@@ -10,11 +10,17 @@ public class Gaulois {
 		this.nom = nom;
 		this.force = force;
 	}
+	public Equipement[] getTrophees(){
+		return trophees;
+	}
 	public String getNom() {
 		return nom;
 	}
 	public int getForce() {
 		return force;
+	}
+	public int getnbTrophees() {
+		return nbTrophees;
 	}
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "« " + texte + "»");
@@ -38,6 +44,11 @@ public class Gaulois {
 	public void boirePotion(int forcepotion) {
 		this.effetPotion=forcepotion;
 		this.parler("Merci Druide, je sens que ma force est "+forcepotion+" fois décuplée");
+	}
+	public void faireUneDonnation(Musee museeDestinataire){
+		if(nbTrophees!=0){
+			museeDestinataire.donnerTrophees(this);
+		}
 	}
 	public static void main(String[] args) {
 		Gaulois gaul1=new Gaulois("Gaul1",10); // 
