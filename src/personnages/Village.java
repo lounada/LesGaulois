@@ -4,7 +4,7 @@ public class Village {
 	private String nom;
 	private Chef chef;
 	private int nbVillageois=0;
-	private Gaulois villageois[]; 
+	private Gaulois[] villageois; 
 	
 	public Village(String nom ,int nbVillageoisMaximum) {
 		this.nom = nom;

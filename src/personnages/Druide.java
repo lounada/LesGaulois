@@ -8,6 +8,7 @@ public class Druide {
 	private int effetPotionMin;
 	private int effetPotionMax;
 	private int forcePotion = 1;
+	private Random random=new Random();
     public Druide(String nom, int effetPotionMin, int effetPotionMax) {
 		this.nom = nom;
 		this.effetPotionMin = effetPotionMin;
@@ -29,7 +30,6 @@ public class Druide {
 		return "Le druide " + nom + " : ";
 	}
 	public void preparerPotion() {
-		Random random = new Random();
 		forcePotion =(random.nextInt(effetPotionMax - effetPotionMin)) + effetPotionMin;
 		String texte = "";
 		if (forcePotion > 7) {
