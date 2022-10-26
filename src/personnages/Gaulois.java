@@ -1,4 +1,6 @@
 package personnages;
+import java.util.Arrays;
+
 import histoire.Musee;
 public class Gaulois {
 	private String nom;
@@ -48,6 +50,7 @@ public class Gaulois {
 	public void faireUneDonnation(Musee museeDestinataire){
 		if(nbTrophees!=0){
 			museeDestinataire.donnerTrophees(this);
+			//Arrays.fill(trophees, null);
 		}
 	}
 	public static void main(String[] args) {

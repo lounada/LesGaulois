@@ -38,6 +38,9 @@ public class Romain {
 	    int oldForce = force;
 	    forceCoup = calculResistanceEquipement(forceCoup);
 	    force -= forceCoup;
+	    if(force<0) {
+	    	force=0;
+	    }
 	    if(force==0) {
 	        equipementEjecte = ejecterEquipement();
 	        parler("J'abandonne...");
@@ -63,12 +66,13 @@ public class Romain {
 	            
 	        }
 	        texte += resistanceEquipement + "!";
+		    parler(texte);
+		    forceCoup -= resistanceEquipement;
+		    if(forceCoup<0) {
+		    	forceCoup=0;
+		    }
 	    }
-	    parler(texte);
-	    forceCoup -= resistanceEquipement;
-	    if(forceCoup<0) {
-	    	forceCoup=0;
-	    }
+
 	    return forceCoup;
 	}
 	private Equipement[] ejecterEquipement() {
@@ -80,6 +84,7 @@ public class Romain {
 	            equipementEjecte[nbEquipementEjecte] = equipements[i];
 	            nbEquipementEjecte++;
 	            equipements[i] = null;
+	            nbEquipement--;
 	        }
 	    }
 	    return equipementEjecte;
