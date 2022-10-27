@@ -18,18 +18,18 @@ public class Scenario {
 		obelix.parler("Par Bélénos, ce n'est pas juste !");
 		druide.booster(asterix);
 		asterix.parler("Bonjour");
-		Romain minus = new Romain("Minus", 6);
+		Romain minus = new Romain("Minus", 6); 
 		Romain milexcus = new Romain("Milexcus", 8);
 		minus.sEquiper(Equipement.BOUCLIER); 
 		minus.sEquiper(Equipement.CASQUE);
 		milexcus.sEquiper(Equipement.CASQUE);
-		minus.parler("UN GAU... UN GAUGAU...");
+		minus.parler("UN GAU... UN GAUGAU..."); 
 		do {
 			asterix.frapper(minus);
 		} while (minus.getForce() > 0);
 		milexcus.parler("UN GAU... UN GAUGAU...");
 		do {
-			asterix.frapper(milexcus);
+			asterix.frapper(milexcus); 
 		} while (milexcus.getForce() > 0);
 
 		//Test de Musee:
@@ -39,6 +39,9 @@ public class Scenario {
 		
 		//affichage des trophees dans musee:
 		musee.afficherTrophees();
+		
+		//Test de method extraireInstructionsCaml
+		System.out.println(musee.extraireInstructionsCaml());
 
 	}
 

@@ -50,7 +50,7 @@ public class Gaulois {
 	public void faireUneDonnation(Musee museeDestinataire){
 		if(nbTrophees!=0){
 			museeDestinataire.donnerTrophees(this);
-			//Arrays.fill(trophees, null);
+			Arrays.fill(trophees, null);
 		}
 	}
 	public static void main(String[] args) {

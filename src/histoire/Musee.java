@@ -32,5 +32,14 @@ public class Musee {
 			System.out.println(trophees[i].getGaulois().getNom() +" : "+trophees[i].getEquipement().toString());
 		}
 	}
+	public String extraireInstructionsCaml() {
+		String texte="let musee=[";
+		for(int i=0;i<nbTrophees;i++) {
+			texte+='"'+trophees[i].getGaulois().getNom()+'"'+','+' '+'"'+trophees[i].getEquipement().toString()+'"';
+			if(i!=nbTrophees-1) texte+=';';
+		}
+		texte+=']';
+		return texte;
+	}
 
 }
